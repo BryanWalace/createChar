@@ -1,4 +1,5 @@
 package org.example
+import java.util.Scanner
 
 interface BonusRaca {
     fun bonus(caracteristicas: Caracteristicas): Caracteristicas
@@ -234,5 +235,57 @@ class Gnomo : BonusRaca {
             caracteristicas.sabedoria,
             caracteristicas.carisma
         )
+    }
+}
+
+fun mostrarRacas() {
+    println("Todas as Raças:")
+    println("1. Anão da Montanha")
+    println("2. Draconato")
+    println("3. Humano")
+    println("4. Meio-Orc")
+    println("5. Elfo")
+    println("6. Halfling")
+    println("7. Gnomo da Floresta")
+    println("8. Anão")
+    println("9. Halfling Robusto")
+    println("10. Gnomo das Rochas")
+    println("11. Alto Elfo")
+    println("12. Tiefling")
+    println("13. Anão da Colina")
+    println("14. Elfo da Floresta")
+    println("15. Meio-Elfo")
+    println("16. Drow")
+    println("17. Halfling Pés-Leves")
+    println("18.. Gnomo")
+}
+
+fun selecionarRaca(): Int {
+    val scanner = Scanner(System.`in`)
+    print("Digite o numero da raça: ")
+    return scanner.nextInt()
+}
+
+fun racaSelecionada(idRaca: Int): BonusRaca {
+    return when (idRaca){
+        1 -> AnaoDaMontanha()
+        2 -> Draconato()
+        3 -> Humano()
+        4 -> MeioOrc()
+        5 -> Elfo()
+        6 -> Halfling()
+        7 -> GnomoDaFloresta()
+        8 -> Anao()
+        9 -> HalflingRobusto()
+        10 -> GnomoDasRochas()
+        11 -> AltoElfo()
+        12 -> Tiefling()
+        13 -> AnaoDaColina()
+        14 -> ElfoDaFloresta()
+        15 -> MeioElfo()
+        16 -> Drow()
+        17 -> HalflingPesLeves()
+        18 -> Gnomo()
+        else -> throw IllegalArgumentException("Numero da raça desconhecida: $idRaca")
     }
 }

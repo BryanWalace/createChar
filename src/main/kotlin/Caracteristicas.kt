@@ -1,17 +1,17 @@
 package org.example
 
 data class Caracteristicas (
-    var forca: int,
-    var destreza: int,
-    var constituicao: int,
-    var inteligencia: int,
-    var sabedoria: int,
-    var carisma: int
+    var forca: Int,
+    var destreza: Int,
+    var constituicao: Int,
+    var inteligencia: Int,
+    var sabedoria: Int,
+    var carisma: Int
 ) {
-    val pontoDeVida: int = 10 + (constituicao - 10) / 2
+    val pontoDeVida: Int = 10 + (constituicao - 10) / 2
 
     fun mostrarCaracteristicas(){
-        println("Atributos do personagem:")
+        println("Habilidades do personagem:")
         println("Força: $forca")
         println("Destreza: $destreza")
         println("Constituição: $constituicao")
