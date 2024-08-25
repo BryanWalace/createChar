@@ -25,10 +25,10 @@ fun main() {
     mostrarRacas()
 
     val idRaca = selecionarRaca()
+    val nomeRaca = capRaca(idRaca)
     val bonusRaca = racaSelecionada(idRaca)
     val caracteristicaFinal = bonusRaca.bonus(caracteristicas)
 
-    println("Raça: $idRaca")
-    println("Habilidades:")
-    caracteristicaFinal.mostrarCaracteristicas()
+
+    mostrarResultado(nomeRaca, caracteristicaFinal)
 }

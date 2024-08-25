@@ -257,7 +257,7 @@ fun mostrarRacas() {
     println("15. Meio-Elfo")
     println("16. Drow")
     println("17. Halfling Pés-Leves")
-    println("18.. Gnomo")
+    println("18. Gnomo")
 }
 
 fun selecionarRaca(): Int {
@@ -287,5 +287,29 @@ fun racaSelecionada(idRaca: Int): BonusRaca {
         17 -> HalflingPesLeves()
         18 -> Gnomo()
         else -> throw IllegalArgumentException("Numero da raça desconhecida: $idRaca")
+    }
+}
+
+fun capRaca(idRaca: Int): String {
+    return when (idRaca) {
+        1 -> "Anão da Montanha"
+        2 -> "Draconato"
+        3 -> "Humano"
+        4 -> "Meio-Orc"
+        5 -> "Elfo"
+        6 -> "Halfling"
+        7 -> "Gnomo da Floresta"
+        8 -> "Anão"
+        9 -> "Halfling Robusto"
+        10 -> "Gnomo das Rochas"
+        11 -> "Alto Elfo"
+        12 -> "Tiefling"
+        13 -> "Anão da Colina"
+        14 -> "Elfo da Floresta"
+        15 -> "Meio-Elfo"
+        16 -> "Drow"
+        17 -> "Halfling Pés-Leves"
+        18 -> "Gnomo"
+        else -> "Raça desconhecida"
     }
 }

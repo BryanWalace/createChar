@@ -21,3 +21,9 @@ data class Caracteristicas (
         println("Pontos de vida: $pontoDeVida")
     }
 }
+
+fun mostrarResultado(nomeRaca: String, caracteristicas: Caracteristicas) {
+    repeat(50) { println() }
+    println("Raça: $nomeRaca")
+    caracteristicas.mostrarCaracteristicas()
+}

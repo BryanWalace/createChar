@@ -44,6 +44,7 @@ class PontosBase(private var pontos: Int, private val habilidades: MutableMap<St
             println("Digite a quantidade de pontos para adicionar à habilidade \"$nomeHabilidade\":")
             val qtdPontos = scanner.nextInt()
             scanner.nextLine()
+            repeat(50) { println() }
 
             val novoValor = valorAtual + qtdPontos
             if (novoValor > 15) {
@@ -66,10 +67,10 @@ class PontosBase(private var pontos: Int, private val habilidades: MutableMap<St
                 break
             }
         }
-
         println("Todos os pontos distribuídos.")
         idNome.forEach { (id, nome) ->
             println("Número: $id, Atributo: $nome, Valor: ${habilidades[nome]}")
         }
+        repeat(50) { println() }
     }
 }
